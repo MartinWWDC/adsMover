@@ -35,7 +35,7 @@ def upload_to_s3(local_path, bucket_name, s3_path):
 
 def runner():
     local_path = "./public"
-    bucket_name = "bf-tino-test"
+    bucket_name = os.getenv('bucket_name')
     s3_path = "/pr/"
 
     if upload_to_s3(local_path, bucket_name, s3_path):
