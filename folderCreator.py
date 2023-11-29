@@ -31,3 +31,9 @@ def genSingleAd():
     create_folder_structure(ad_id)
     print("Struttura delle cartelle creata con successo.")
 
+
+def genNumId(max):
+    for i in range(1,max+1):
+        create_folder_structure(i)
+
+genNumId(1000)
