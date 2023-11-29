@@ -11,12 +11,12 @@ def create_folder_structure(ad_id):
     os.makedirs(responsive_images_path)
 
     for i in range(1, 2):
-        img_path = os.path.join(conversions_path, f"img{i}")
+        img_path = os.path.join(conversions_path, f"img{i}.txt")
         with open(img_path, "w") as f:
             f.write(f"This is img{i}")
 
     for i in range(3, 5):
-        img_path = os.path.join(responsive_images_path, f"img{i}")
+        img_path = os.path.join(responsive_images_path, f"img{i}.txt")
         with open(img_path, "w") as f:
             f.write(f"This is img{i}")
 
@@ -32,4 +32,4 @@ def genNumId(max):
     for i in range(1,max+1):
         create_folder_structure(i)
 
-genNumId(1000)
+genNumId(4)
