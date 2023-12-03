@@ -36,7 +36,7 @@ def upload_to_s3(local_path, bucket_name, s3_path):
 def runner():
     local_path = "./public"
     bucket_name = os.getenv('bucket_name')
-    s3_path = "/pr/"
+    s3_path = "public/"
 
     if upload_to_s3(local_path, bucket_name, s3_path):
         print(f"Tutti i file in {local_path} sono stati caricati su S3 nel percorso {s3_path}.")
